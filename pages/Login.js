@@ -71,7 +71,7 @@ export default function Login({ navigation }) {
           style={styles.button}
           onPress={() => navigation.navigate("Home")}
         >
-          <Text style={{ fontSize: 16 }}>Log In</Text>
+          <Text style={{ fontSize: 18, fontFamily: "Baloo-Bold" }}>Log In</Text>
         </Pressable>
         <View style={{ alignItems: "center", marginTop: 42, gap: 2 }}>
           <Text>Don't have an account?</Text>
