@@ -79,18 +79,20 @@ export default function Home({ navigation }) {
                 Make sure to snack!
               </Text>
             </View>
-            <View style={[styles.gridItem, { backgroundColor: "#FFCED5" }]}>
-              <Image
-                style={[styles.gridImage, { height: 39, top: -3 }]}
-                source={require("../images/Calendar.png")}
-              />
-              <Text style={[styles.gridTextBig, { color: "white" }]}>
-                Calendar
-              </Text>
-              <Text style={[styles.gridTextSmall, { color: "#DD5969" }]}>
-                4:30 TA office hours
-              </Text>
-            </View>
+            <Pressable onPress={() => navigation.navigate("Calendar")}>
+              <View style={[styles.gridItem, { backgroundColor: "#FFCED5" }]}>
+                <Image
+                  style={[styles.gridImage, { height: 39, top: -3 }]}
+                  source={require("../images/Calendar.png")}
+                />
+                <Text style={[styles.gridTextBig, { color: "white" }]}>
+                  Calendar
+                </Text>
+                <Text style={[styles.gridTextSmall, { color: "#DD5969" }]}>
+                  4:30 TA office hours
+                </Text>
+              </View>
+          </Pressable>
           </View>
           <View style={styles.gridContainer}>
             <View style={[styles.gridItem, { backgroundColor: "#7793BD" }]}>
@@ -140,9 +142,9 @@ export default function Home({ navigation }) {
             source={require("../images/ProfileIcon.png")}
           />
         </View>
-        {/* <Pressable onPress={() => navigation.navigate("Login")}>
+        <Pressable onPress={() => navigation.navigate("Login")}>
           <Text>Sign Out</Text>
-        </Pressable> */}
+        </Pressable>
       </SafeAreaView>
     </View>
   );
