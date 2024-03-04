@@ -31,7 +31,8 @@
           "fonts": [
             "./assets/fonts/Baloo2-VariableFont_wght.ttf",
             "./assets/fonts/Baloo2-Regular.ttf",
-            "./assets/fonts/Baloo2-Bold.ttf"
+            "./assets/fonts/Baloo2-Bold.ttf",
+            "./assets/fonts/Baloo2-SemiBold.ttf"
           ]
         }
       ]
