@@ -12,6 +12,9 @@ export default function Home({ navigation }) {
   return (
     <SafeAreaView>
       <Text>HELLO</Text>
+      <Pressable onPress={() => navigation.navigate("Calendar")}>
+        <Text>Calendar</Text>
+      </Pressable>
       <Pressable onPress={() => navigation.navigate("Login")}>
         <Text>Sign Out</Text>
       </Pressable>
