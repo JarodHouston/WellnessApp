@@ -105,7 +105,10 @@ export default function Home({ navigation }) {
                 It's time to journal!
               </Text>
             </View>
-            <View style={[styles.gridItem, { backgroundColor: "#A0D69C" }]}>
+            <Pressable
+              style={[styles.gridItem, { backgroundColor: "#A0D69C" }]}
+              onPress={() => navigation.navigate("ActivityTimer")}
+            >
               <Image
                 style={[
                   styles.gridImage,
@@ -119,7 +122,7 @@ export default function Home({ navigation }) {
               <Text style={[styles.gridTextSmall, { color: "#44863F" }]}>
                 Counting down!
               </Text>
-            </View>
+            </Pressable>
           </View>
         </View>
         <View style={styles.bottomNavigation}>
