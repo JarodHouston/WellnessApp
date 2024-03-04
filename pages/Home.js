@@ -30,6 +30,16 @@ export default function Home({ navigation }) {
         style={{ position: "absolute", width: "100%", height: "100%" }}
         source={require("../images/HomePage.png")}
       />
+      <Image
+        style={{
+          width: 50,
+          height: 50,
+          position: "absolute",
+          left: "77%",
+          marginTop: 66,
+        }}
+        source={require("../images/ProfilePic.png")}
+      />
       <SafeAreaView>
         <View style={{ marginTop: 40, marginLeft: 24 }}>
           <Text style={{ fontSize: 30, fontFamily: "Baloo-Bold" }}>
@@ -92,7 +102,7 @@ export default function Home({ navigation }) {
                   4:30 TA office hours
                 </Text>
               </View>
-          </Pressable>
+            </Pressable>
           </View>
           <View style={styles.gridContainer}>
             <View style={[styles.gridItem, { backgroundColor: "#7793BD" }]}>
@@ -107,7 +117,10 @@ export default function Home({ navigation }) {
                 It's time to journal!
               </Text>
             </View>
-            <View style={[styles.gridItem, { backgroundColor: "#A0D69C" }]}>
+            <Pressable
+              style={[styles.gridItem, { backgroundColor: "#A0D69C" }]}
+              onPress={() => navigation.navigate("ActivityTimer")}
+            >
               <Image
                 style={[
                   styles.gridImage,
@@ -121,9 +134,22 @@ export default function Home({ navigation }) {
               <Text style={[styles.gridTextSmall, { color: "#44863F" }]}>
                 Counting down!
               </Text>
-            </View>
+            </Pressable>
           </View>
         </View>
+
+        {/* <Pressable onPress={() => navigation.navigate("Login")}>
+          <Text>Sign Out</Text>
+        </Pressable> */}
+      </SafeAreaView>
+      <View
+        style={{
+          position: "absolute",
+          top: "87.5%",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
         <View style={styles.bottomNavigation}>
           <Image
             style={{ width: 28, height: 25 }}
@@ -137,15 +163,14 @@ export default function Home({ navigation }) {
             style={{ width: 29, height: 25 }}
             source={require("../images/HeartIcon.png")}
           />
-          <Image
-            style={{ width: 29, height: 25 }}
-            source={require("../images/ProfileIcon.png")}
-          />
+          <Pressable onPress={() => navigation.navigate("Login")}>
+            <Image
+              style={{ width: 29, height: 25 }}
+              source={require("../images/ProfileIcon.png")}
+            />
+          </Pressable>
         </View>
-        <Pressable onPress={() => navigation.navigate("Login")}>
-          <Text>Sign Out</Text>
-        </Pressable>
-      </SafeAreaView>
+      </View>
     </View>
   );
 }
@@ -211,9 +236,6 @@ const styles = StyleSheet.create({
   },
   bottomNavigation: {
     backgroundColor: "#092550",
-    marginTop: 50,
-    marginLeft: "auto",
-    marginRight: "auto",
     width: 328,
     height: 69,
     display: "flex",
